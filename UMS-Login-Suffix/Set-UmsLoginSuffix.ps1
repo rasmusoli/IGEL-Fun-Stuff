@@ -11,7 +11,8 @@ Only services running before the operation are restarted.
 #>
 [CmdletBinding()]
 param(
-    [string]$JarPath = 'C:\Program Files\IGEL\RemoteManager\rmguiserver\webapps\auth-service\WEB-INF\lib\login-ui-resource-12.14.103.jar',
+    [string]$JarPath,
+    [string]$UmsPath,
     [string]$BackupDirectory = (Join-Path $PSScriptRoot 'ums-login-backups'),
     [ValidateSet('Menu','DryRun','Add','Restore')]
     [string]$Action = 'Menu',
@@ -21,6 +22,42 @@ param(
 
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.IO.Compression.FileSystem
+
+function Resolve-LoginJar([string]$InstallationPath, [string]$ExplicitJarPath) {
+    if ($InstallationPath -and $ExplicitJarPath) { throw 'Specify either -UmsPath or -JarPath, not both.' }
+    if ($ExplicitJarPath) {
+        $file = Get-Item -LiteralPath $ExplicitJarPath
+        if ($file.PSIsContainer -or $file.Name -notlike 'login-ui-resource-*.jar') {
+            throw '-JarPath must name a login-ui-resource-*.jar file.'
+        }
+        return $file.FullName
+    }
+    $relativeLib = 'rmguiserver\webapps\auth-service\WEB-INF\lib'
+    if (-not $InstallationPath) {
+        # Prefer native Program Files even when launched from 32-bit PowerShell.
+        $programFilesRoot = $env:ProgramW6432
+        if (-not $programFilesRoot) { $programFilesRoot = $env:ProgramFiles }
+        if (-not $programFilesRoot) { throw 'Cannot determine Program Files. Supply -UmsPath.' }
+        $defaultPath = Join-Path $programFilesRoot 'IGEL\RemoteManager'
+        if (Test-Path -LiteralPath (Join-Path $defaultPath $relativeLib) -PathType Container) {
+            $InstallationPath = $defaultPath
+        } else {
+            Write-Host "Default UMS instance not found: $defaultPath"
+            $InstallationPath = (Read-Host 'Enter the UMS RemoteManager installation directory (blank cancels)').Trim().Trim('"')
+            if (-not $InstallationPath) { throw 'UMS path selection cancelled.' }
+        }
+    }
+    $root = Get-Item -LiteralPath $InstallationPath
+    if (-not $root.PSIsContainer) { throw '-UmsPath must be the RemoteManager installation directory.' }
+    $lib = Join-Path $root.FullName $relativeLib
+    if (-not (Test-Path -LiteralPath $lib -PathType Container)) { throw "UMS auth-service library directory not found: $lib" }
+    $jars = @(Get-ChildItem -LiteralPath $lib -Filter 'login-ui-resource-*.jar' -File)
+    if ($jars.Count -eq 0) { throw "No login-ui-resource-*.jar found in $lib" }
+    if ($jars.Count -gt 1) {
+        throw "Multiple login resource JARs found: $($jars.Name -join ', '). Supply -JarPath with the exact intended file; no version is selected automatically."
+    }
+    return $jars[0].FullName
+}
 
 function New-LoginTemplate([string]$Template, [string]$Suffix) {
     if ($Template.Contains('UMS-UPN-SUFFIX-PATCH-v1')) {
@@ -349,7 +386,8 @@ function Invoke-Choice([string]$Choice) {
     else { Invoke-WithUmsStopped $service { Invoke-AddCore $identity.Suffix } }
 }
 
-$JarPath = (Resolve-Path -LiteralPath $JarPath).Path
+$JarPath = Resolve-LoginJar -InstallationPath $UmsPath -ExplicitJarPath $JarPath
+Write-Host "Discovered login resource: $JarPath"
 $BackupDirectory = [IO.Path]::GetFullPath($BackupDirectory)
 $webappsIndex = $JarPath.IndexOf('\webapps\', [StringComparison]::OrdinalIgnoreCase)
 if ($webappsIndex -ge 0) {
