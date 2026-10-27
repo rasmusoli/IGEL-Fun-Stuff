@@ -19,13 +19,17 @@ This is an independent customization of the installed UMS login template, not an
 - Allow a UMS service interruption when applying or restoring. The script stops the detected service and restarts it only if it was running beforehand.
 - Keep backups outside the UMS `webapps` directory.
 
-The default target is:
+At startup, the script looks for the default UMS instance under native Windows Program Files:
 
 ```text
-C:\Program Files\IGEL\RemoteManager\rmguiserver\webapps\auth-service\WEB-INF\lib\login-ui-resource-12.14.103.jar
+C:\Program Files\IGEL\RemoteManager
 ```
 
-Only `templates/login.html` inside that JAR is modified. The script checks the expected template structure and rejects signed JARs or duplicate archive entries. Other versions need inspection and validation before use; changing the filename alone does not establish compatibility.
+If the default instance's auth-service library directory is missing, the script prompts for the **RemoteManager installation directory**. A blank answer cancels. It then searches only `rmguiserver\webapps\auth-service\WEB-INF\lib` beneath that directory for `login-ui-resource-*.jar`; no specific version number is required. The selected full path is displayed before the menu.
+
+No matching JAR stops the operation. Multiple matches also stop the operation rather than guessing which version is active; use `-JarPath` to select the intended file explicitly. Invalid supplied paths stop with an error. Discovery is read-only, including when running Dry run. For unattended use, supply `-UmsPath` or `-JarPath` to avoid the missing-default prompt.
+
+Only `templates/login.html` inside the discovered JAR is modified. The script checks the expected template structure and rejects signed JARs or duplicate archive entries. Automatic discovery does not establish compatibility with every UMS version; inspect and validate new versions before applying.
 
 ## Quick start
 
@@ -100,9 +104,11 @@ Override paths if needed:
 
 ```powershell
 .\Set-UmsLoginSuffix.ps1 `
-    -JarPath 'D:\IGEL\RemoteManager\rmguiserver\webapps\auth-service\WEB-INF\lib\login-ui-resource-12.14.103.jar' `
+    -UmsPath 'D:\IGEL\RemoteManager' `
     -BackupDirectory 'D:\UMS-Backups\LoginSuffix'
 ```
+
+To select a specific JAR when multiple matches exist, use `-JarPath '<full path to the intended login-ui-resource-*.jar>'` instead of `-UmsPath`. Do not specify both. Backup and restore matching still uses the exact discovered JAR path and hashes.
 
 If automatic service detection fails or is ambiguous, inspect the installed services:
 
@@ -135,4 +141,4 @@ After applying, verify the displayed suffix and test a short LDAP username, a fu
 
 UMS upgrades may replace the JAR or change the template and component implementation. Reinspect the new installation before reapplying, and retain version-specific backups. Do not copy a backup JAR from an older UMS version over a newer installation.
 
-Local development checks covered PowerShell parsing, dry runs without writes, repeated Add as a no-op, archive-entry preservation, exact original restoration, corrupt-backup rejection, and simulated service stop/work/start ordering. Live operation of the menu's service detection and stop/restart flow remains deployment-specific.
+Local development checks covered PowerShell parsing, default/custom installation discovery, the missing-default prompt, missing/ambiguous JAR rejection, explicit JAR selection, dry runs without writes, repeated Add as a no-op, archive-entry preservation, exact original restoration, corrupt-backup rejection, and simulated service stop/work/start ordering. Live operation of the menu's service detection and stop/restart flow remains deployment-specific.
