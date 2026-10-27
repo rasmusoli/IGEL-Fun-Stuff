@@ -1,0 +1,5 @@
+/ums-login-backups/
+*.original
+*.patched
+*.before-restore
+*.tmp
