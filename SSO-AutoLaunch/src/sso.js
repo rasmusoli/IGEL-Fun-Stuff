@@ -1,4 +1,4 @@
-// Unofficial, standalone UMS 12.14.103 SSO launcher. No authentication is handled here.
+// Unofficial, standalone UMS 12.14.103 SSO launcher, v1.1. No authentication is handled here.
 (async () => {
   const loginPath = '/auth-service/login';
 
@@ -27,12 +27,18 @@
     const handlerAt = html.indexOf('function handleButtonLoginSso');
     if (handlerAt < 0) throw new Error('Native UMS SSO action not found');
 
-    // Use the destination embedded in the server-rendered button handler.
+    // Thymeleaf renders the SSO URL as a JavaScript string argument.
     const handler = html.slice(handlerAt, handlerAt + 700);
-    const match = handler.match(/\/auth-service\/oauth2\/authorization\/[A-Za-z0-9][A-Za-z0-9._~-]*/);
-    if (!match) throw new Error('SSO is disabled or the UMS login template changed');
+    const encoded = handler.match(/window\.location\.replace\(\s*("(?:\\.|[^"\\])*")\s*\)/)?.[1];
+    if (!encoded) throw new Error('Rendered UMS SSO redirect not found');
 
-    window.location.replace(match[0]);
+    const target = new URL(JSON.parse(encoded), response.url);
+    if (target.origin !== window.location.origin ||
+        !/^\/auth-service\/oauth2\/authorization\/[^/]+$/.test(target.pathname)) {
+      throw new Error('Unexpected UMS SSO redirect');
+    }
+
+    window.location.replace(target.href);
   } catch (error) {
     console.error('UMS SSO launcher:', error);
     document.getElementById('status').textContent =
