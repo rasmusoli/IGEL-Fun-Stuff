@@ -1,5 +1,10 @@
 # IGEL Log Parser changelog
 
+## [1.0.1](https://github.com/rasmusoli/IGEL-Fun-Stuff/releases/tag/igel-log-parser-v1.0.1) (2026-11-26)
+
+- **Compare two devices from one support ZIP.** Open **Compare devices** after loading a combined UMS support bundle with two devices. There’s no need to split the ZIP. **Compare captures** still compares logs from the same device over time.
+- **Find settings without paging through one long list.** Settings are grouped by their key paths, so you can expand branches such as **CWA → Module → VirtualDriver** or **Devices → Hotplug**. Search opens the matching groups. Each side keeps its own source link, and an empty captured value is shown separately from a setting that wasn’t observed.
+
 ## [1.0.0](https://github.com/rasmusoli/IGEL-Fun-Stuff/releases/tag/igel-log-parser-v1.0.0) (2026-11-26)
 
 - Reset the public version numbering from 3.50.x to 1.0.0. This release keeps the parser behavior, report schema and rule set from 3.50.696, including its Full JSON export fix.

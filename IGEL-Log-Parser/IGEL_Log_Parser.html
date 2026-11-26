@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'wasm-unsafe-eval' blob:; worker-src blob:; child-src blob:; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <meta name="igel-parser-version" content="1.0.0">
+  <meta name="igel-parser-version" content="1.0.1">
   <title>IGEL Log Parser · Offline review</title>
   <style id="review-style">:root{--ink:#172d3c;--muted:#5c6d77;--line:#dce3e6;--bg:#f5f7f8;--paper:#fff;--accent:#176b65;--soft:#edf5f3;--navy:#142e40;--red:#a33638;--focus:#237fbb;font-family:"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:16px;line-height:1.55;color-scheme:light}
 *{box-sizing:border-box}body{margin:0}button,input,select,summary{font:inherit}button,summary{touch-action:manipulation}button{cursor:pointer;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px 14px;line-height:1.4;min-height:44px}button:hover{background:#eff3f5;border-color:#b5c5cc}button:disabled{opacity:.45;cursor:default}button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}button.primary:hover{background:#105b56}button.link{background:none;border:0;color:var(--accent);padding:4px 0;text-align:left}a{color:var(--accent)}:focus-visible{outline:3px solid var(--focus);outline-offset:3px}[hidden]{display:none!important}h1,h2,h3,h4,p{margin:0}h1{font-size:32px;line-height:1.2;letter-spacing:-.8px;font-weight:600}h2{font-size:22px;letter-spacing:-.35px;font-weight:600;line-height:1.3}h3{font-size:16px;font-weight:600}h4{font-size:14px;font-weight:600}p+p{margin-top:10px}small,.small{font-size:14px}.muted{color:var(--muted)}.eyebrow{font-size:14px;font-weight:650;text-transform:uppercase;letter-spacing:1.7px;color:var(--accent)}.app-header{min-height:78px;padding:16px max(24px,calc((100vw - 1240px)/2));display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid var(--line);gap:20px}.brand{display:flex;align-items:center;gap:16px;font-size:18px;font-weight:600;white-space:nowrap}.brand-mark{font-weight:800;letter-spacing:-.5px;font-size:18px;background:var(--navy);color:#fff;border-radius:5px;padding:5px 9px}.header-actions,#result-actions{display:flex;align-items:center;gap:12px}.local-label{font-size:14px;letter-spacing:.3px;color:var(--muted);white-space:nowrap}.local-label::before{content:"";display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:50%;margin-right:7px}main{max-width:1240px;margin:0 auto;padding:0 24px 56px}.intake{max-width:760px;margin:64px auto}.intake-heading{margin-bottom:28px}.intake-heading h1{margin:9px 0 10px}.intake-heading p{color:var(--muted);font-size:17px}.drop{border:1px dashed #9eb4bd;border-radius:10px;background:var(--paper);text-align:center;padding:42px 24px}.drop svg{color:var(--accent);margin-bottom:12px}.drop h2{font-size:21px}.drop p{color:var(--muted);margin:7px 0 20px}.drop.drag{background:var(--soft);border-color:var(--accent)}.intake-bottom{display:flex;justify-content:space-between;gap:12px;margin-top:12px;font-size:14px;flex-wrap:wrap}.incident-options{margin:28px 0 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0}.incident-options summary .muted{font-size:14px;margin-left:8px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0 10px}.form-grid label{font-size:14px}.wide{grid-column:1/-1}input,select{padding:9px 11px;border:1px solid #bbc9cf;border-radius:5px;background:#fff;color:var(--ink);min-height:44px;max-width:100%;min-width:0}input[type=search]{width:100%}label input{display:block;width:100%;margin-top:5px}.intake-actions{display:flex;gap:9px}.queue:empty{display:none}.queue{margin-top:18px}.file-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:14px;border-bottom:1px solid var(--line);padding:9px 0}.file-row strong{font-weight:500;overflow-wrap:anywhere}.file-row span{font-size:14px;color:var(--muted)}.file-row button{border:0;color:var(--muted);font-size:14px}#progress{margin-top:24px}.progress-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;overflow-wrap:anywhere}progress{width:100%;height:5px;accent-color:var(--accent)}.notice{border:1px solid #e3d3af;background:#fff9ec;border-radius:6px;padding:12px 16px;color:#76531c;margin:20px 0;display:flex;gap:12px;align-items:center;justify-content:space-between}.notice button{background:transparent;border-color:#ddc99e;color:inherit;white-space:nowrap}.notice.error{color:var(--red);background:#fff3f1;border-color:#e9cdca}.report-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:34px 0 26px}.report-heading p{margin-top:7px;color:var(--muted);font-size:14px}.report-heading select{max-width:310px}.nav{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--line);gap:4px 20px;margin:0 0 30px}.nav button{border:0;border-radius:0;background:transparent;color:var(--muted);padding:12px 2px;border-bottom:3px solid transparent;margin-bottom:-1px;font-size:14px;white-space:nowrap}.nav button[aria-current=page]{border-bottom-color:var(--accent);color:var(--ink);font-weight:650}.nav button:hover{color:var(--accent)}.overview-grid{display:grid;grid-template-columns:minmax(0,1fr) 355px;gap:24px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}.panel-head{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px}.panel-head h2{font-size:17px}.panel-body{padding:20px 22px}.lead{padding:28px 28px 24px;background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:24px}.lead h2{margin:9px 0;font-size:28px}.lead p{color:var(--muted);max-width:650px}.lead .link{margin-top:14px}.finding-row{display:grid;grid-template-columns:68px minmax(0,1fr);gap:14px;align-items:start;width:100%;border:0;border-bottom:1px solid var(--line);border-radius:0;text-align:left;background:#fff;padding:18px;min-height:80px}.finding-row:last-child{border-bottom:0}.finding-row:hover{background:#f5f9f8}.finding-row strong{font-size:14px;display:block;font-weight:600}.finding-row .row-sub{font-size:14px;color:var(--muted);display:block;margin-top:5px;overflow-wrap:anywhere}.badge{display:inline-block;border-radius:4px;padding:3px 7px;background:#eff2f4;color:#51616c;font-size:14px;font-weight:650;line-height:1.4;white-space:nowrap;vertical-align:middle}.badge.high,.badge.critical{background:#f9e9e7;color:#963c36}.badge.medium{background:#fcf2da;color:#896020}.badge.low{background:#eef3f7;color:#4f687b}.badge.informational{background:#f0f2f3;color:#5d6e78}.badge.confirmed{background:#e7f2ee;color:#29665a}.empty{padding:32px 24px;color:var(--muted);font-size:14px}.empty strong{display:block;color:var(--ink);margin-bottom:6px;font-size:16px;font-weight:600}.device-mini+.device-mini{border-top:1px solid var(--line);margin-top:18px;padding-top:18px}.device-mini strong{display:block;font-size:14px;overflow-wrap:anywhere}.device-mini p{font-size:14px;color:var(--muted);margin-top:4px}.device-mini button{font-size:14px;margin-top:6px}.toolbar{display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap}.toolbar .search{flex:1;min-width:220px}.toolbar label{font-size:14px;color:var(--muted)}.toolbar select{min-width:145px}.segmented{display:flex;gap:4px;background:#eaf0f2;border-radius:7px;padding:4px;width:fit-content;margin-bottom:22px;max-width:100%;flex-wrap:wrap}.segmented button{border:0;background:transparent;font-size:14px;min-height:34px;padding:6px 13px}.segmented button[aria-pressed=true]{background:#fff;box-shadow:0 1px 3px #16364b15;color:var(--accent);font-weight:600}.results-meta{font-size:14px;color:var(--muted);margin-bottom:12px}.pager{display:flex;align-items:center;justify-content:space-between;margin:16px 0;font-size:14px;gap:12px}.pager div{display:flex;gap:8px}.table-scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px;text-align:left}th{font-size:14px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:600;background:#f7f9fa;padding:12px 16px;border-bottom:1px solid var(--line)}td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}tr:last-child td{border-bottom:0}td .link{font-size:14px;min-height:0}td.key{font-family:Consolas,"Cascadia Code",monospace;font-size:14px;word-break:break-word;min-width:230px;max-width:400px}td.value{max-width:260px;white-space:pre-wrap;overflow-wrap:anywhere}.settings-table{table-layout:fixed;min-width:650px}.settings-table th:nth-child(1){width:40%}.settings-table th:nth-child(2){width:25%}.settings-table th:nth-child(3){width:35%}.section-note{color:var(--muted);font-size:14px;margin:10px 0 20px}.detail-section{margin-bottom:24px}.detail-section>h3{margin-bottom:10px}.disclosure{border:1px solid var(--line);border-radius:7px;margin:12px 0;background:#fff}.disclosure>summary{padding:15px 18px;font-weight:550;font-size:14px}.disclosure>div{padding:0 18px 18px}.disclosure .disclosure{border-radius:4px}.disclosure .disclosure>summary{padding:10px 12px;font-size:14px}summary{cursor:pointer;overflow-wrap:anywhere}.facts{margin:0;display:grid;grid-template-columns:145px minmax(0,1fr);gap:12px 20px;font-size:14px}.facts dt{color:var(--muted)}.facts dd{margin:0;overflow-wrap:anywhere}.evidence{background:#f5f7f8;border:1px solid var(--line);border-radius:5px;margin:12px 0;overflow:hidden}.evidence .source-label{font:14px/1.5 "Segoe UI",sans-serif;padding:10px 12px;border-bottom:1px solid var(--line);overflow-wrap:anywhere;color:var(--muted)}.evidence pre{margin:0;padding:13px;font:14px/1.7 Consolas,"Cascadia Code",monospace;white-space:pre-wrap;overflow-wrap:anywhere;max-height:320px;overflow:auto}.evidence .source-label strong{color:var(--ink);font-weight:600}.source-results>details>summary{font-size:14px}.warning-list{margin:0;padding-left:20px;font-size:14px}.warning-list li+li{margin-top:14px}.warning-list small{display:block;color:var(--muted);overflow-wrap:anywhere}.export-menu{position:relative}.export-menu>summary{list-style:none;cursor:pointer;padding:8px 14px;border:1px solid var(--line);border-radius:6px;min-height:44px;font-size:14px}.export-menu>summary::-webkit-details-marker{display:none}.export-menu>div{position:absolute;right:0;top:48px;min-width:210px;padding:6px;background:#fff;border:1px solid var(--line);border-radius:7px;box-shadow:0 8px 30px #152d3c15;z-index:20}.export-menu button{display:block;width:100%;text-align:left;border:0;font-size:14px}.review-dialog{border:1px solid var(--line);border-radius:10px;width:min(860px,calc(100% - 32px));max-height:calc(100% - 56px);padding:0;color:var(--ink);box-shadow:0 24px 80px #0f263e30}.review-dialog::backdrop{background:#132a3a65}.dialog-header{position:sticky;top:0;background:#fff;padding:24px 28px;border-bottom:1px solid var(--line);display:flex;gap:20px;justify-content:space-between;align-items:start;z-index:2}.dialog-header h2{font-size:22px;margin-top:8px}.dialog-header button{flex-shrink:0}.dialog-body{padding:24px 28px}.dialog-body p{font-size:14px}.dialog-body .assessment{font-size:15px;line-height:1.7}.dialog-body .facts{margin:20px 0}.dialog-body ul{padding-left:20px;font-size:14px}.dialog-body li+li{margin-top:7px}.dialog-body code{overflow-wrap:anywhere;white-space:pre-wrap}.technical-text{white-space:pre-wrap;font:14px/1.6 Consolas,monospace;overflow-wrap:anywhere}.timeline-table td:first-child{min-width:165px;color:var(--muted);font-size:14px}.timeline-table .link{font-weight:550}.review-footer{margin-top:32px;padding-top:15px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);display:flex;gap:20px;justify-content:space-between}.source-path{overflow-wrap:anywhere;font-size:14px;color:var(--muted)}
@@ -57,13 +57,17 @@
 @media(max-width:600px){.comparison-pair{grid-template-columns:minmax(0,1fr)}.comparison-swap{justify-self:start}}
 @media print{.comparison-selectors{display:block;margin:8px 0;padding:0;border:0;background:transparent}.comparison-device,.comparison-pick select,.comparison-swap{display:none!important}.comparison-pair{grid-template-columns:1fr 1fr}.comparison-pick{padding:8px;border:0;background:transparent}.comparison-pick-a,.comparison-pick-b{border-top:0}.comparison-table{display:table;min-width:0!important}.comparison-table thead{position:static;width:auto;height:auto;padding:0;margin:0;overflow:visible;clip:auto;white-space:normal;border:0}.comparison-table tbody{display:table-row-group}.comparison-table tbody tr{display:table-row;margin:0;border:0;overflow:visible}.comparison-table td{display:table-cell!important;padding:8px;border:1px solid var(--line)!important}.comparison-table td[data-label]::before{content:none!important}.comparison-status{border:1px solid currentColor}}
 .finder-result-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:stretch}.finder-result-row .finder-result{min-width:0}.finder-result .finder-result-value{color:var(--ink);font-weight:550}.finder-source-action{min-height:44px;align-self:stretch;padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--accent);font-weight:600;cursor:pointer}.finder-source-action:hover{background:var(--soft);border-color:#a8c1bb}.finder-source-action:focus-visible{outline:3px solid #216b8b;outline-offset:2px}@media(max-width:600px){.finder-result-row{grid-template-columns:1fr}.finder-source-action{justify-self:start}}
+.comparison-mode-toggle{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.comparison-mode-toggle button[aria-pressed="true"]{border-color:var(--accent);background:var(--soft);color:var(--accent);font-weight:650}.comparison-device-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin:14px 0}.comparison-pick label{display:grid;gap:5px;margin-top:10px;font-weight:600}.comparison-pick select{width:100%;min-width:0}.comparison-boundary{margin:14px 0}.comparison-scroll{overflow:auto}.comparison-table td{vertical-align:top}.comparison-table .setting-context{display:block}
+@media(max-width:700px){.comparison-device-pair{grid-template-columns:1fr}.comparison-mode-toggle button{flex:1 1 220px}}
+.device-comparison-tree{display:grid;gap:8px;margin:14px 0}.device-comparison-group{border:1px solid var(--line);border-radius:7px;background:#fff;overflow:hidden}.device-comparison-group>summary{display:flex;align-items:center;gap:10px;min-height:46px;padding:10px 14px;font-weight:650;cursor:pointer;list-style-position:inside}.device-comparison-group>summary:hover{background:#f1f6f5}.comparison-group-count{margin-left:auto;color:var(--muted);font-size:14px;font-weight:400}.device-comparison-group-body{padding:10px 12px 14px 22px;border-top:1px solid var(--line)}.device-comparison-group-body>.device-comparison-group{margin:8px 0}.device-comparison-group-body>.comparison-scroll{margin-top:8px}.comparison-group-table{min-width:760px}.comparison-group-table th:first-child{min-width:190px}.exact-comparison-key{font-weight:400;overflow-wrap:anywhere}.copy-comparison-key{min-height:34px;margin-top:5px;padding:4px 8px;font-size:13px}.comparison-empty-value{font-style:italic;color:#604b16;background:#fff5d9}
+.comparison-group-table tbody th{text-transform:none}.comparison-group-table .exact-comparison-key{text-transform:none}
 </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="app-header">
     <div class="brand"><span class="brand-mark">IGEL</span><span>Log review</span></div>
-    <div class="header-actions"><span class="version-label">Version 1.0.0</span><span class="local-label">Local &amp; offline</span><div id="result-actions" hidden>
+    <div class="header-actions"><span class="version-label">Version 1.0.1</span><span class="local-label">Local &amp; offline</span><div id="result-actions" hidden>
       <button id="new-analysis">New analysis</button>
       <details class="export-menu"><summary>Export <span aria-hidden="true">↓</span></summary><div>
         <button data-export="html">HTML report</button><button data-export="json">Full data · JSON</button>
@@ -185,7 +189,7 @@ self.onmessage = async ({ data }) => {
 })(typeof window !== 'undefined' ? window : globalThis);
 
 IGELParserModules.define('constants', () => Object.freeze({
-  VERSION: '1.0.0',
+  VERSION: '1.0.1',
   REPORT_SCHEMA_VERSION: '3.35',
   RULE_SET_VERSION: '2026.10.06.9',
   MAX_INPUT_FILES: 32,
@@ -15123,6 +15127,87 @@ function makeReviewModel(report) {
   return model;
 }
 
+function buildDeviceComparisonModel(left, right) {
+  const list = value => Array.isArray(value) ? value : value == null ? [] : [value];
+  const identity = snapshot => [...new Set(list(snapshot?.deviceIds).filter(value =>
+    (typeof value === 'string' && value.trim() && !/^\[(?:redacted\b|record tail omitted\b|public projection depth limit)/i.test(value)) ||
+    (typeof value === 'number' && Number.isFinite(value))
+  ).map(value => JSON.stringify([typeof value, value])))];
+  const leftIds = identity(left), rightIds = identity(right);
+  if (!left?.device || !right?.device || left.device === right.device) return { valid: false, reason: 'Choose two different named devices.' , rows: [] };
+  if (leftIds.length !== 1 || rightIds.length !== 1) return { valid: false, reason: 'Comparison withheld: each selected capture must retain one unambiguous device ID. Device names alone do not establish identity.', leftIds, rightIds, rows: [] };
+  if (leftIds[0] === rightIds[0]) return { valid: false, reason: 'Comparison withheld: both selected captures report the same device ID, so distinct devices are not established.', leftIds, rightIds, rows: [] };
+
+  const redacted = value => /\[(?:redacted\b|record tail omitted\b|public projection depth limit\b)/i.test(String(value ?? ''));
+  const buckets = [new Map(), new Map()];
+  const add = (side, kind, key, layer, value, evidence) => {
+    if (key == null || String(key) === '') return;
+    const displayKey = String(key), displayLayer = String(layer || 'Source layer not classified');
+    const id = JSON.stringify([kind, displayKey, displayLayer]);
+    if (!buckets[side].has(id)) buckets[side].set(id, { kind, key: displayKey, layer: displayLayer, values: new Set(), evidence: [] });
+    const bucket = buckets[side].get(id);
+    bucket.values.add(String(value ?? 'Not recorded'));
+    for (const ref of list(evidence)) {
+      if (!ref || typeof ref !== 'object') continue;
+      const refId = JSON.stringify([ref.archive ?? null, ref.path ?? null, ref.ref ?? null, ref.location?.jsonPointer ?? null]);
+      if (!bucket.evidence.some(item => JSON.stringify([item.archive ?? null, item.path ?? null, item.ref ?? null, item.location?.jsonPointer ?? null]) === refId)) bucket.evidence.push(ref);
+    }
+  };
+  const index = (snapshot, side) => {
+    add(side, 'device', 'IGEL OS version', 'Device identity', list(snapshot.osVersions).join(', ') || null, []);
+    add(side, 'device', 'Firmware model', 'Device identity', list(snapshot.firmwareModels).join(', ') || null, []);
+    for (const setting of [...list(snapshot.effectiveSettings), ...list(snapshot.localSettings), ...list(snapshot.settingProvenance)]) {
+      add(side, 'setting', setting.key, setting.layer, setting.value, setting.evidence);
+    }
+    for (const profile of list(snapshot.configurationExports)) {
+      const layer = 'Exported profile · ' + String(profile.profileName || profile.name || 'Profile not named') + (profile.profileId == null ? '' : ' · ID ' + profile.profileId);
+      for (const setting of list(profile.settings)) add(side, 'setting', setting.key, layer, setting.value, setting.evidence);
+    }
+    for (const profile of list(snapshot.assignedProfiles)) {
+      const name = String(profile.name || profile.profileName || 'Unnamed profile').trim();
+      const profileId = profile.id == null || profile.id === '' ? 'name:' + name.toLocaleLowerCase() : 'id:' + String(profile.id);
+      add(side, 'profile', profileId, 'Assigned profile', [name, profile.id == null || profile.id === '' ? null : 'ID ' + profile.id, profile.assignmentScope || null].filter(Boolean).join(' · '), profile.evidence);
+    }
+  };
+  index(left, 0); index(right, 1);
+  const rows = [...new Set([...buckets[0].keys(), ...buckets[1].keys()])].map(id => {
+    const a = buckets[0].get(id) || null, b = buckets[1].get(id) || null, item = a || b;
+    const aValues = a ? [...a.values].sort() : [], bValues = b ? [...b.values].sort() : [];
+    const withheld = redacted(item.key) || [...aValues, ...bValues].some(redacted);
+    const status = withheld ? 'Comparison withheld'
+      : aValues.length > 1 || bValues.length > 1 ? 'Multiple values · review'
+        : !a ? 'Only observed in B' : !b ? 'Only observed in A'
+          : aValues[0] === bValues[0] ? 'Same recorded value' : 'Different recorded values';
+    return { kind: item.kind, key: item.key, layer: item.layer, a, b, aValues, bValues, status };
+  }).sort((a, b) => a.kind.localeCompare(b.kind) || a.key.localeCompare(b.key) || a.layer.localeCompare(b.layer));
+  return { valid: true, leftIds, rightIds, rows };
+}
+
+function buildDeviceComparisonTree(rows) {
+  const roots = new Map();
+  const ensure = (siblings, segment, path) => {
+    if (!siblings.has(segment)) siblings.set(segment, { segment, path, rows: [], children: new Map() });
+    return siblings.get(segment);
+  };
+  for (const row of rows) {
+    const parts = String(row.key).split('.');
+    let siblings = roots, node = null, path = [];
+    if (parts.length === 1) {
+      path = ['@unscoped'];
+      node = ensure(siblings, '@unscoped', path);
+    } else {
+      for (const part of parts) {
+        path = [...path, part];
+        node = ensure(siblings, part, path);
+        siblings = node.children;
+      }
+    }
+    node.rows.push(row);
+  }
+  const sort = nodes => [...nodes.values()].sort((a, b) => a.segment.localeCompare(b.segment));
+  return sort(roots);
+}
+
 function mountLogReview(root, model) {
   'use strict';
   const arr = value => Array.isArray(value) ? value : value ? [value] : [];
@@ -15144,7 +15229,7 @@ function mountLogReview(root, model) {
   for(const input of arr(model.inputs))if(!inputsById.has(input.inputId))inputsById.set(input.inputId,input);
   const partialInputCount=arr(model.inputs).reduce((count,input)=>count+Number(!/^(analyzed|duplicate)/i.test(input.status || '')),0);
   const allFindings = [...arr(model.hardwareFindings),...arr(model.osFindings),...arr(model.umsFindings)];
-  const state = {view:'overview',scope:'',query:'',filter:'all',domain:'',page:0,historyPages:{},device:devices[0]?.name || '',capture:'',compareA:'',compareB:'',compareQuery:'',compareFilter:'differences',compareLimit:80,config:devices.length?'details':arr(model.configurationExports).length?'profiles':'settings',profileScopeAll:false,settingMode:'captured',profile:'',settingReturn:null,settingFilters:{layer:'',source:'',namespace:'',multiple:false},evidence:'timeline',coverageFilter:'all'};
+  const state = {view:'overview',scope:'',query:'',filter:'all',domain:'',page:0,historyPages:{},device:devices[0]?.name || '',capture:'',compareMode:'captures',compareDeviceA:'',compareDeviceB:'',compareSnapshotA:'',compareSnapshotB:'',compareA:'',compareB:'',compareQuery:'',compareFilter:'differences',compareLimit:80,compareGroupLimits:{},compareOpenGroups:new Set(),config:devices.length?'details':arr(model.configurationExports).length?'profiles':'settings',profileScopeAll:false,settingMode:'captured',profile:'',settingReturn:null,settingFilters:{layer:'',source:'',namespace:'',multiple:false},evidence:'timeline',coverageFilter:'all'};
   const deviceSnapshotsByName=new Map();
   for(const snapshot of arr(model.deviceSnapshots)){
     let index=deviceSnapshotsByName.get(snapshot.device);
@@ -15185,6 +15270,7 @@ function mountLogReview(root, model) {
   const settingRowsByCapture = new WeakMap();
   const settingSearchIndexes = new WeakMap();
   let treeId = 0, groups = [], settings = [], profiles = [], currentEvents = [], sourceCache, activeTrigger, evidenceActionFromPanel = false;
+  let activeDeviceComparisonTreeNodes = new Map(), activeDeviceComparisonGroupContent = null;
   let evidenceCurrent = null, evidenceHistory = [], evidenceTrigger = null;
   let finderQuery = '', finderInputTimer, finderIndex = null, finderIndexScope = state.scope, finderSearchState = null;
   const PAGE = 20;
@@ -15512,7 +15598,7 @@ function mountLogReview(root, model) {
   const summaryFacts=pairs=>`<div class="panel-body"><dl class="facts">${pairs.map(([k,v])=>fact(k,v)).join('')}</dl></div>`;
   function captureControls() {
     const d=currentDevice(),capture=currentCapture(),snapshots=deviceSnapshotsByName.get(d?.name)?.snapshots || [];
-    return `<div class="toolbar"><select id="config-device" aria-label="Device">${devices.length?devices.map(x=>option(x.name,x.name,d?.name)).join(''):'<option>Unassigned exports</option>'}</select>${snapshots.length>1?`<select id="config-capture" aria-label="Capture">${snapshots.map(s=>option(s.snapshotId,`${s.archive}${s.snapshotId===d?.selectedSnapshotId?' · selected':''}`,capture.snapshotId)).join('')}</select>${button('device-compare','Compare captures side by side (A/B)','action',d?.name || '')}`:`<span class="source-path">${esc(capture.archive || '')}</span>`}</div>`;
+    return `<div class="toolbar"><select id="config-device" aria-label="Device">${devices.length?devices.map(x=>option(x.name,x.name,d?.name)).join(''):'<option>Unassigned exports</option>'}</select>${snapshots.length>1?`<select id="config-capture" aria-label="Capture">${snapshots.map(s=>option(s.snapshotId,`${s.archive}${s.snapshotId===d?.selectedSnapshotId?' · selected':''}`,capture.snapshotId)).join('')}</select>${button('device-compare','Compare captures (same device)','action',d?.name || '')}`:`<span class="source-path">${esc(capture.archive || '')}</span>`}</div>`;
   }
   const transitionLabel=t=>({'listed-in-configuration':'Newly listed','not-listed-in-configuration':'No longer listed','no-longer-listed':'No longer listed','version-change':'Version changed','application-name-change':'Application name changed'}[t] || words(t));
   function applicationAlerts(apps) {
@@ -16615,7 +16701,92 @@ function mountLogReview(root, model) {
     if(device)comparisonCaptureOptionsByDevice.set(device,cached);
     return cached;
   }
+  function deviceComparisonView() {
+    const candidates=devices.filter(item=>(deviceSnapshotsByName.get(item.name)?.snapshots||[]).some(snapshot=>snapshot.snapshotId));
+    const deviceA=candidates.find(item=>item.name===state.compareDeviceA)||candidates[0]||null;
+    if(deviceA && deviceA.name!==state.compareDeviceA)state.compareDeviceA=deviceA.name;
+    const deviceB=candidates.find(item=>item.name===state.compareDeviceB&&item!==deviceA)||candidates.find(item=>item!==deviceA)||null;
+    if(deviceB && deviceB.name!==state.compareDeviceB)state.compareDeviceB=deviceB.name;
+    const capturesFor=device=>device ? (deviceSnapshotsByName.get(device.name)?.snapshots||[]).filter(item=>item.snapshotId) : [];
+    const selectedCapture=(device,side)=>{
+      const captures=capturesFor(device),field=side==='A'?'compareSnapshotA':'compareSnapshotB';
+      const selected=captures.find(item=>item.snapshotId===state[field])||captures.find(item=>item.snapshotId===device?.selectedSnapshotId)||captures.at(-1)||null;
+      state[field]=selected?.snapshotId||'';
+      return selected;
+    };
+    const captureA=selectedCapture(deviceA,'A'),captureB=selectedCapture(deviceB,'B');
+    const intro='<section class="comparison-selectors" aria-label="Compare different devices"><h2>Compare devices</h2><p class="section-note">Compare captured settings and profile observations for two devices. Each side is a selected device snapshot; A and B are not chronological order. A missing value does not prove removal, and each value opens its own retained source evidence.</p></section>';
+    if(candidates.length<2)return intro+empty('No second device available','Compare devices needs retained snapshots for at least two distinct named devices. This action is independent of how many ZIP files were supplied.');
+    const deviceOptions=selected=>candidates.map(item=>option(item.name,item.name,selected)).join('');
+    const captureLabel=snapshot=>`${snapshot.archive||'Capture source not named'} · ${snapshot.snapshotId.slice(0,8)}${snapshot.completeness==='metadata-only'?' · metadata only':''}`;
+    const captureOptions=(device,selected)=>capturesFor(device).map(item=>option(item.snapshotId,captureLabel(item),selected)).join('');
+    const selectors=`<div class="comparison-pair comparison-device-pair"><section class="comparison-pick"><h3>Device A</h3><label>Device<select id="compare-device-a" aria-label="Device A">${deviceOptions(deviceA?.name||'')}</select></label><label>Capture<select id="compare-device-capture-a" aria-label="Capture for device A">${captureOptions(deviceA,state.compareSnapshotA)}</select></label></section><section class="comparison-pick"><h3>Device B</h3><label>Device<select id="compare-device-b" aria-label="Device B">${deviceOptions(deviceB?.name||'')}</select></label><label>Capture<select id="compare-device-capture-b" aria-label="Capture for device B">${captureOptions(deviceB,state.compareSnapshotB)}</select></label></section></div>`;
+    if(!deviceA||!deviceB||!captureA||!captureB)return intro+selectors+empty('Choose two device captures','Select one retained capture for each device.');
+    const comparison=buildDeviceComparisonModel(captureA,captureB);
+    const identityText=snapshot=>`Device ID${snapshot.deviceIds?.length===1?'':'s'}: ${arr(snapshot.deviceIds).map(text).join(', ')||'Not retained'}`;
+    const selectedSummary=`<details class="disclosure"><summary>Selected devices and capture evidence</summary><div class="comparison-pair"><section><h3>${esc(deviceA.name)} · Device A</h3><p>${esc(captureLabel(captureA))}</p><p>${esc(identityText(captureA))}</p><p>Capture completeness: ${esc(captureA.completeness||captureA.status||'Unknown')}</p></section><section><h3>${esc(deviceB.name)} · Device B</h3><p>${esc(captureLabel(captureB))}</p><p>${esc(identityText(captureB))}</p><p>Capture completeness: ${esc(captureB.completeness||captureB.status||'Unknown')}</p></section></div></details>`;
+    if(!comparison.valid)return intro+selectors+selectedSummary+`<p class="notice" role="status">${esc(comparison.reason)}</p>`;
+    const query=state.compareQuery.trim().toLocaleLowerCase();
+    const searched=comparison.rows.filter(row=>!query||[row.kind,row.key,row.layer,row.status,...row.aValues,...row.bValues,...arr(row.a?.evidence).flatMap(ref=>[ref.archive,ref.path,ref.excerpt]),...arr(row.b?.evidence).flatMap(ref=>[ref.archive,ref.path,ref.excerpt])].join(' ').toLocaleLowerCase().includes(query));
+    const rows=state.compareFilter==='all'?searched:searched.filter(row=>row.status!=='Same recorded value');
+    const counts={different:rows.filter(row=>row.status==='Different recorded values').length,oneSide:rows.filter(row=>/^Only observed/.test(row.status)).length,ambiguous:rows.filter(row=>row.status.startsWith('Multiple values')).length,withheld:rows.filter(row=>row.status==='Comparison withheld').length};
+    const statusClass=status=>status==='Different recorded values'?'different':status==='Same recorded value'?'same':'uncertain';
+    const showValue=value=>value===''?'<code class="comparison-empty-value" aria-label="Empty captured string">(empty string captured)</code>':`<code>${esc(value)}</code>`;
+    const evidenceCell=(entry,side,status)=>{
+      if(!entry)return '<span class="muted">Not observed in this capture; this does not establish removal.</span>';
+      if(status==='Comparison withheld')return '<span class="comparison-status comparison-status-uncertain">Underlying value withheld</span>';
+      const values=[...entry.values].sort().map(showValue).join('<br>'),refs=collectEvidence(entry.evidence);
+      const sourceNames=unique(refs.map(ref=>[ref.archive,ref.path,ref.location?.lineStart?`line ${ref.location.lineStart}`:''].filter(Boolean).join(' · ')));
+      return values+(sourceNames.length?`<small class="setting-context">${sourceNames.map(esc).join('<br>')}</small>`:'')+(refs.length?inspectButton(`Open ${side} source${refs.length===1?'':'s'}`,refs,`${side} · ${entry.key} source`):'<small class="setting-context">No retained source reference</small>');
+    };
+    const segmentLabel=segment=>{
+      if(segment==='@unscoped')return 'Unscoped keys';
+      if(/^[{(]?[0-9a-f]{8}-[0-9a-f-]{27,}[)}]?$/i.test(segment))return segment;
+      return String(segment).replace(/^usb(access|redirection)$/i,'usb $1').replace(/^(device)(policy)$/i,'$1 $2').replace(/^(class)(rule)(\d*)$/i,'$1 $2 $3').replace(/([a-z0-9])([A-Z])/g,'$1 $2').replace(/([a-zA-Z])(\d+)$/,'$1 $2').replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim().split(' ').filter(Boolean).map(word=>/^[a-z]{2,3}$/.test(word)?word.toLocaleUpperCase():word.replace(/^./,c=>c.toLocaleUpperCase())).join(' ');
+    };
+    const roots=buildDeviceComparisonTree(rows);
+    activeDeviceComparisonTreeNodes=new Map();
+    const renderRows=(node,entries)=>{
+      const nodeId=JSON.stringify(node.path),limit=state.compareGroupLimits[nodeId]||80;
+      const shown=entries.slice(0,limit);
+      if(!shown.length)return '';
+      const body=`<div class="table-scroll comparison-scroll" tabindex="0" role="region" aria-label="Settings in ${esc(node.path.map(segmentLabel).join(' · '))}"><table class="comparison-table comparison-group-table"><thead><tr><th scope="col">Setting</th><th scope="col">${esc(deviceA.name)} · Device A</th><th scope="col">Status</th><th scope="col">${esc(deviceB.name)} · Device B</th></tr></thead><tbody>${shown.map(row=>{
+        return `<tr data-device-comparison-row data-status="${esc(row.row.status)}"><th scope="row"><strong>${esc(row.leaf)}</strong><span class="setting-context exact-comparison-key">${esc(row.row.key)}<br>${esc(row.row.layer)}</span><button type="button" class="copy-comparison-key" data-action="copy-device-setting" data-value="${esc(row.row.key)}" data-layer="${esc(row.row.layer)}" aria-label="Copy exact key and layer">Copy key + layer</button></th><td>${evidenceCell(row.row.a,'Device A',row.row.status)}</td><td><span class="comparison-status comparison-status-${statusClass(row.row.status)}">${esc(row.row.status)}</span></td><td>${evidenceCell(row.row.b,'Device B',row.row.status)}</td></tr>`;
+      }).join('')}</tbody></table></div>${shown.length<entries.length?`<button type="button" data-action="compare-group-more" data-value="${esc(nodeId)}">Show next ${Math.min(80,entries.length-shown.length)} in this group</button>`:''}`;
+      return body;
+    };
+    const renderNode=(node,autoOpen=false)=>{
+      const id=JSON.stringify(node.path);activeDeviceComparisonTreeNodes.set(id,node);
+      const childNodes=[...node.children.values()].sort((a,b)=>a.segment.localeCompare(b.segment));
+      const count=node.rows.length+[...node.children.values()].reduce((sum,child)=>sum+countTreeRows(child),0);
+      const summary=`${esc(segmentLabel(node.segment))}<span class="comparison-group-count">${count} observation${count===1?'':'s'}</span>`;
+      const openContent=()=>{
+        const leaves=[...node.rows.map(row=>({row,leaf:node.segment==='@unscoped'?row.key:segmentLabel(node.segment)}))];
+        const branches=[];
+        for(const child of childNodes){
+          if(child.children.size===0)leaves.push(...child.rows.map(row=>({row,leaf:segmentLabel(child.segment)})));
+          else branches.push(child);
+        }
+        return renderRows(node,leaves)+branches.map(child=>renderNode(child,autoOpen)).join('');
+      };
+      const open=autoOpen||state.compareOpenGroups.has(id);
+      return `<details class="device-comparison-group" data-device-group data-group-id="${esc(id)}"${open?' open data-loaded="true"':''}><summary>${summary}</summary><div class="device-comparison-group-body">${open?openContent():''}</div></details>`;
+    };
+    const indexNodes=node=>{activeDeviceComparisonTreeNodes.set(JSON.stringify(node.path),node);for(const child of node.children.values())indexNodes(child);};
+    roots.forEach(indexNodes);
+    activeDeviceComparisonGroupContent=node=>{
+      const childNodes=[...node.children.values()].sort((a,b)=>a.segment.localeCompare(b.segment));
+      const leaves=[...node.rows.map(row=>({row,leaf:node.segment==='@unscoped'?row.key:segmentLabel(node.segment)}))],branches=[];
+      for(const child of childNodes){if(child.children.size===0)leaves.push(...child.rows.map(row=>({row,leaf:segmentLabel(child.segment)})));else branches.push(child);}
+      return renderRows(node,leaves)+branches.map(child=>renderNode(child,false)).join('');
+    };
+    const countTreeRows=node=>node.rows.length+[...node.children.values()].reduce((sum,child)=>sum+countTreeRows(child),0);
+    const treeMarkup=roots.length?`<div class="device-comparison-tree" aria-label="Settings grouped by key path">${roots.map(node=>renderNode(node,Boolean(query))).join('')}</div>`:empty('No matching observations','Change the search or show all retained observations.');
+    const filters=`<div class="toolbar comparison-filters"><label>Search comparison<input id="compare-search" type="search" aria-label="Search device settings and profiles" value="${esc(state.compareQuery)}" placeholder="Setting key, profile, value…"></label><label>Show<select id="compare-filter" aria-label="Comparison rows">${option('differences','Differences and uncertainty',state.compareFilter)}${option('all','All retained observations',state.compareFilter)}</select></label></div>`;
+    return intro+selectors+selectedSummary+filters+`<p class="results-meta" role="status">${rows.length} matching observations across all retained keys · ${counts.different} different · ${counts.oneSide} observed on one side · ${counts.ambiguous} ambiguous · ${counts.withheld} withheld. Exact device IDs passed the distinct-identity check.</p><p class="section-note comparison-boundary">A and B are not time order. Values come from each selected capture's own retained sources. A missing value does not prove removal; settings do not establish runtime application or profile priority. Open a key group to browse its settings. Search opens matching groups automatically.</p>`+treeMarkup;
+  }
   function comparisonView() {
+    if(state.compareMode==='devices')return deviceComparisonView();
     const d = currentDevice();
     const {captures,byId:captureById,duplicateArchive}=comparisonCaptureOptions(d);
     const captureId=item=>String(item?.snapshotId??'');
@@ -16743,11 +16914,12 @@ function mountLogReview(root, model) {
   function configurationView() {
     const d = currentDevice(), capture = currentCapture();
     const allProfiles=state.profileScopeAll;
-    const modes=allProfiles?[['profiles','UMS profiles'],['settings','Profile settings']]:devices.length?[['details','Device details'],['settings','Settings'],['profiles','Profiles'],['compare','Compare side by side']]:[['profiles','Profiles'],['settings','Settings']];
+    const modes=allProfiles?[['profiles','UMS profiles'],['settings','Profile settings']]:devices.length?[['details','Device details'],['settings','Settings'],['profiles','Profiles'],['compare','Compare captures']]:[['profiles','Profiles'],['settings','Settings']];
     const noDeviceSummary=!devices.length?`<section class="panel"><div class="panel-body"><h2>UMS profile exports</h2><p>${arr(model.configurationExports).length} definitions across ${unique(arr(model.configurationExports).map(x=>x.archive).filter(Boolean)).length} export sources. This report has no device capture, so assignment to a device and runtime application are not established.</p></div></section>`:'';
     const profileSummary=allProfiles?`<section class="panel"><div class="panel-body"><h2>UMS profile exports</h2><p>${arr(model.configurationExports).length} definitions across ${unique(arr(model.configurationExports).map(x=>x.archive).filter(Boolean)).length} export sources. This view includes definitions from all supplied UMS exports; it does not attribute settings to a device.</p></div></section>`:'';
     const header=allProfiles?profileSummary:devices.length?(state.config==='compare'?'':captureControls()+captureSummary(capture,d)):noDeviceSummary;
-    return header+`<div class="segmented">${modes.map(([v,l])=>`<button data-action="config" data-value="${v}" aria-pressed="${state.config===v}">${l}</button>`).join('')}</div>${state.config === 'settings' ? settingsView(capture) : state.config === 'profiles' ? profilesView(capture) : state.config === 'details' ? deviceDetails(capture) : comparisonView()}`;
+    const comparisonModes=state.config==='compare'&&!allProfiles?`<div class="comparison-mode-toggle" role="group" aria-label="Comparison type"><button type="button" data-action="compare-mode" data-value="captures"${state.compareMode==='captures'?' aria-pressed="true"':''}>Compare captures · same device</button><button type="button" data-action="compare-mode" data-value="devices"${state.compareMode==='devices'?' aria-pressed="true"':''}>Compare devices</button></div>`:'';
+    return header+`<div class="segmented">${modes.map(([v,l])=>`<button data-action="config" data-value="${v}" aria-pressed="${state.config===v}">${l}</button>`).join('')}</div>${comparisonModes}${state.config === 'settings' ? settingsView(capture) : state.config === 'profiles' ? profilesView(capture) : state.config === 'details' ? deviceDetails(capture) : comparisonView()}`;
   }
   function timelineView() {
     currentEvents=[];
@@ -16897,11 +17069,12 @@ function mountLogReview(root, model) {
       ? comparisonCandidates.find(device=>(deviceSnapshotsByName.get(device?.name)?.snapshots.length || 0)>1)
       : null;
     const compareLabel=comparisonDevice?.name===currentComparisonDevice?.name?'Compare captures':`Compare ${comparisonDevice?.name || 'captures'}`;
-    root.innerHTML=`<div class="report-heading"><div><h1>${viewNames[state.view]}</h1><p>${esc(subtitle)}</p></div><div class="report-heading-actions">${comparisonDevice?button('device-compare',compareLabel,'action',comparisonDevice.name):''}<button class="finder-open" data-action="open-evidence-finder" aria-keyshortcuts="Control+K Meta+K"><span>Find evidence</span><kbd>Ctrl/Cmd+K</kbd></button>${scopeFilterVisible ? `<select id="scope-filter" aria-label="Report scope">${option('',allScopesLabel,state.scope)}${devices.map(d=>option(d.name,d.name,state.scope)).join('')}${hasUmsContent?option('@ums',umsScopeLabel,state.scope):''}</select>` : ''}</div></div><nav class="nav" aria-label="Report views">${Object.entries(viewNames).map(([v,l])=>`<button data-action="view" data-value="${v}"${state.view === v ? ' aria-current="page"' : ''}>${l}</button>`).join('')}</nav>${partial || warnings ? `<div class="notice"><span>${partial ? `${partial} collection${partial===1?'':'s'} need coverage review` : 'Processing notes'}${warnings ? ' · '+warnings+' note'+(warnings===1?'':'s') : ''}</span>${button('coverage','Review coverage','')}</div>` : ''}<section id="view-content" aria-label="${viewNames[state.view]}">${state.view==='overview'?overview():state.view==='findings'?findingsView():state.view==='configuration'?configurationView():state.view==='history'?updateHistoryView():evidenceView()}</section><footer class="review-footer"><span>IGEL parser ${esc(model.parser?.version || '')}${model.parser?.generatedAt?' · Generated '+esc(time(model.parser.generatedAt)):''}</span><span>This report uses captured logs, not live device health.</span></footer>`;
+    const distinctDeviceCandidates=devices.filter(device=>(deviceSnapshotsByName.get(device.name)?.snapshots||[]).some(snapshot=>snapshot.snapshotId));
+    root.innerHTML=`<div class="report-heading"><div><h1>${viewNames[state.view]}</h1><p>${esc(subtitle)}</p></div><div class="report-heading-actions">${comparisonDevice?button('device-compare',compareLabel,'action',comparisonDevice.name):''}${distinctDeviceCandidates.length>1?button('devices-compare','Compare devices','action') : ''}<button class="finder-open" data-action="open-evidence-finder" aria-keyshortcuts="Control+K Meta+K"><span>Find evidence</span><kbd>Ctrl/Cmd+K</kbd></button>${scopeFilterVisible ? `<select id="scope-filter" aria-label="Report scope">${option('',allScopesLabel,state.scope)}${devices.map(d=>option(d.name,d.name,state.scope)).join('')}${hasUmsContent?option('@ums',umsScopeLabel,state.scope):''}</select>` : ''}</div></div><nav class="nav" aria-label="Report views">${Object.entries(viewNames).map(([v,l])=>`<button data-action="view" data-value="${v}"${state.view === v ? ' aria-current="page"' : ''}>${l}</button>`).join('')}</nav>${partial || warnings ? `<div class="notice"><span>${partial ? `${partial} collection${partial===1?'':'s'} need coverage review` : 'Processing notes'}${warnings ? ' · '+warnings+' note'+(warnings===1?'':'s') : ''}</span>${button('coverage','Review coverage','')}</div>` : ''}<section id="view-content" aria-label="${viewNames[state.view]}">${state.view==='overview'?overview():state.view==='findings'?findingsView():state.view==='configuration'?configurationView():state.view==='history'?updateHistoryView():evidenceView()}</section><footer class="review-footer"><span>IGEL parser ${esc(model.parser?.version || '')}${model.parser?.generatedAt?' · Generated '+esc(time(model.parser.generatedAt)):''}</span><span>This report uses captured logs, not live device health.</span></footer>`;
     updateScrollableTableAccess();
   }
   window.addEventListener('resize', updateScrollableTableAccess, { passive: true });
-  function act(event) {
+  async function act(event) {
     const el=event.target.closest('[data-action]');
     if(!el)return;
     const {action,value}=el.dataset;
@@ -16912,6 +17085,12 @@ function mountLogReview(root, model) {
     if(action==='finder-result'){openFinderResult(value);return;}
     if(action==='finder-source'){openFinderSource(value);return;}
     if(action==='copy-evidence'){void copyEvidence(el);return;}
+    if(action==='copy-device-setting'){
+      const payload=[value,el.dataset.layer||''].join('\n');let copied=false;
+      try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(payload);copied=true;}}catch{}
+      if(!copied){const field=document.createElement('textarea');field.value=payload;field.setAttribute('readonly','');field.style.position='fixed';field.style.opacity='0';document.body.append(field);field.focus({preventScroll:true});field.select();try{copied=document.execCommand('copy');}catch{}field.remove();el.focus({preventScroll:true});}
+      el.textContent=copied?'Copied key + layer':'Copy unavailable';setTimeout(()=>{if(el.isConnected)el.textContent='Copy key + layer';},2200);return;
+    }
     if(action==='finding'){findingDialog(groups[Number(value)]);return;}
     if(action==='finding-source'){const g=groups[Number(value)];if(g){const entries=collectEvidence(g.items);presentEvidence('Source excerpts · '+g.title,`<p class="small muted">Evidence retained for this finding, grouped by source file and exact location.</p>${evidenceList(entries)}`,`${badge(g.severity)} ${badge(g.state)}`);}return;}
     if(action==='setting'){settingDialog(settings[Number(value)]);return;}
@@ -16935,6 +17114,7 @@ function mountLogReview(root, model) {
     if(action==='event'){const e=currentEvents[Number(value)];presentEvidence(e.title || e.eventType,eventEvidenceBody(e));return;}
     if(action==='page')state.page+=Number(value);
     else if(action==='compare-more')state.compareLimit+=80;
+    else if(action==='compare-group-more'){const node=activeDeviceComparisonTreeNodes.get(value);if(node)state.compareGroupLimits[value]=(state.compareGroupLimits[value]||80)+80;}
     else if(action==='history-page'){const [key,step]=value.split(':');if(['versions','installations','configuration','files'].includes(key)||key==="components")state.historyPages[key]=Math.max(0,(state.historyPages[key]||0)+(Number(step)||0));}
     else {
       resetSearch();
@@ -16942,7 +17122,9 @@ function mountLogReview(root, model) {
       if(action==='all-findings'){state.view='findings';state.filter='all';state.domain='';}
       if(action==='other-findings'){state.view='findings';state.filter='other';state.domain='';}
       if(action==='device'){state.profileScopeAll=false;state.view='configuration';state.device=value;state.capture='';state.config='settings';state.profile='';defaultSettingMode();}
-      if(action==='device-compare'){const snapshots=arr(model.deviceSnapshots).filter(item=>item.device===value&&item.snapshotId);const device=devices.find(item=>item.name===value);const selected=snapshots.find(item=>item.snapshotId===state.capture)||snapshots.find(item=>item.snapshotId===device?.selectedSnapshotId)||snapshots.at(-1);state.profileScopeAll=false;state.view='configuration';state.device=value;state.capture='';state.compareB=selected?.snapshotId||'';state.compareA=snapshots.find(item=>item.snapshotId!==state.compareB)?.snapshotId||'';state.compareQuery='';state.compareLimit=80;state.config='compare';state.profile='';defaultSettingMode();}
+      if(action==='device-compare'){const snapshots=arr(model.deviceSnapshots).filter(item=>item.device===value&&item.snapshotId);const device=devices.find(item=>item.name===value);const selected=snapshots.find(item=>item.snapshotId===state.capture)||snapshots.find(item=>item.snapshotId===device?.selectedSnapshotId)||snapshots.at(-1);state.profileScopeAll=false;state.view='configuration';state.device=value;state.capture='';state.compareMode='captures';state.compareB=selected?.snapshotId||'';state.compareA=snapshots.find(item=>item.snapshotId!==state.compareB)?.snapshotId||'';state.compareQuery='';state.compareLimit=80;state.config='compare';state.profile='';defaultSettingMode();}
+      if(action==='devices-compare'){const candidates=devices.filter(item=>(deviceSnapshotsByName.get(item.name)?.snapshots||[]).some(snapshot=>snapshot.snapshotId));state.profileScopeAll=false;state.scope='';state.view='configuration';state.config='compare';state.compareMode='devices';state.compareDeviceA=candidates[0]?.name||'';state.compareDeviceB=candidates[1]?.name||'';const choose=device=>{const snapshots=(deviceSnapshotsByName.get(device?.name)?.snapshots||[]).filter(snapshot=>snapshot.snapshotId);return snapshots.find(snapshot=>snapshot.snapshotId===device?.selectedSnapshotId)?.snapshotId||snapshots.at(-1)?.snapshotId||'';};state.compareSnapshotA=choose(candidates[0]);state.compareSnapshotB=choose(candidates[1]);state.compareQuery='';state.compareLimit=80;state.profile='';}
+      if(action==='compare-mode'){state.compareMode=value==='devices'?'devices':'captures';state.compareQuery='';state.compareLimit=80;if(state.compareMode==='captures'){state.device=state.compareDeviceA||state.device;const snapshots=arr(model.deviceSnapshots).filter(item=>item.device===state.device&&item.snapshotId);state.compareB=snapshots.find(item=>item.snapshotId===state.capture)?.snapshotId||snapshots.find(item=>item.snapshotId===devicesByName.get(state.device)?.selectedSnapshotId)?.snapshotId||snapshots.at(-1)?.snapshotId||'';state.compareA=snapshots.find(item=>item.snapshotId!==state.compareB)?.snapshotId||'';}else {const candidates=devices.filter(item=>(deviceSnapshotsByName.get(item.name)?.snapshots||[]).some(snapshot=>snapshot.snapshotId));state.compareDeviceA=candidates[0]?.name||'';state.compareDeviceB=candidates[1]?.name||'';}}
       if(action==='device-usb'){state.profileScopeAll=false;state.view='configuration';state.device=value;state.capture='';state.config='details';state.profile='';defaultSettingMode();}
       if(action==='device-details'){state.profileScopeAll=false;state.view='configuration';state.device=value;state.capture='';state.config='details';state.profile='';defaultSettingMode();}
       if(action==='setting-search'||action==='local-setting-search'){state.settingReturn=null;}
@@ -16973,6 +17155,22 @@ function mountLogReview(root, model) {
     if(action==='device-usb')root.querySelector('#device-usb')?.scrollIntoView({block:'start'});
   }
   root.addEventListener('click',act);dialog.addEventListener('click',event=>{evidenceActionFromPanel=true;try{act(event);}finally{evidenceActionFromPanel=false;}});
+  root.addEventListener('toggle',event=>{
+    const group=event.target.closest?.('details[data-device-group]');
+    if(!group)return;
+    const groupId=group.dataset.groupId;
+    if(group.open)state.compareOpenGroups.add(groupId);
+    else {
+      let closedPath=[];try{closedPath=JSON.parse(groupId);}catch{}
+      for(const openId of [...state.compareOpenGroups]){let openPath=[];try{openPath=JSON.parse(openId);}catch{}if(closedPath.every((part,index)=>openPath[index]===part))state.compareOpenGroups.delete(openId);}
+    }
+    if(!group.open||group.dataset.loaded==='true')return;
+    const node=activeDeviceComparisonTreeNodes.get(groupId);
+    const body=group.querySelector('.device-comparison-group-body');
+    if(!node||!body||!activeDeviceComparisonGroupContent)return;
+    body.innerHTML=activeDeviceComparisonGroupContent(node);
+    group.dataset.loaded='true';
+  },true);
   root.addEventListener('click',event=>{
     const link=event.target.closest('a[href^="#device-"]');
     if(!link)return;
@@ -16991,7 +17189,11 @@ function mountLogReview(root, model) {
     else if(id==='config-capture'){state.profileScopeAll=false;state.capture=value;state.profile='';state.settingFilters={layer:'',source:'',namespace:'',multiple:false};defaultSettingMode();}
     else if(id==='compare-a'){state.compareA=value;state.compareLimit=80;}
     else if(id==='compare-b'){state.compareB=value;state.compareLimit=80;}
-    else if(id==='compare-filter'){state.compareFilter=value;state.compareLimit=80;}
+    else if(id==='compare-device-a'){state.compareDeviceA=value;const snapshots=(deviceSnapshotsByName.get(value)?.snapshots||[]).filter(item=>item.snapshotId);state.compareSnapshotA=snapshots.find(item=>item.snapshotId===devicesByName.get(value)?.selectedSnapshotId)?.snapshotId||snapshots.at(-1)?.snapshotId||'';state.compareQuery='';state.compareLimit=80;state.compareGroupLimits={};state.compareOpenGroups.clear();}
+    else if(id==='compare-device-b'){state.compareDeviceB=value;const snapshots=(deviceSnapshotsByName.get(value)?.snapshots||[]).filter(item=>item.snapshotId);state.compareSnapshotB=snapshots.find(item=>item.snapshotId===devicesByName.get(value)?.selectedSnapshotId)?.snapshotId||snapshots.at(-1)?.snapshotId||'';state.compareQuery='';state.compareLimit=80;state.compareGroupLimits={};state.compareOpenGroups.clear();}
+    else if(id==='compare-device-capture-a'){state.compareSnapshotA=value;state.compareQuery='';state.compareLimit=80;state.compareGroupLimits={};state.compareOpenGroups.clear();}
+    else if(id==='compare-device-capture-b'){state.compareSnapshotB=value;state.compareQuery='';state.compareLimit=80;state.compareGroupLimits={};state.compareOpenGroups.clear();}
+    else if(id==='compare-filter'){state.compareFilter=value;state.compareLimit=80;state.compareGroupLimits={};state.compareOpenGroups.clear();}
     else if(id==='setting-mode'){state.settingMode=value;state.profile='';state.settingFilters={layer:'',source:'',namespace:'',multiple:false};}
     else if(id==='profile-filter')state.profile=value;
     else if(id==='setting-profile')state.profile=value;
@@ -17007,7 +17209,7 @@ function mountLogReview(root, model) {
   root.addEventListener('input',event=>{
     const comparison=event.target.id==='compare-search';
     if(!comparison&&event.target.id!=='review-search')return;
-    if(comparison){state.compareQuery=event.target.value;state.compareLimit=80;}
+    if(comparison){state.compareQuery=event.target.value;state.compareLimit=80;state.compareGroupLimits={};state.compareOpenGroups.clear();}
     else {setSearchQuery(event.target.value);state.page=0;state.historyPages={};}
     const id=comparison?'compare-search':'review-search',cursor=event.target.selectionStart;
     clearTimeout(searchTimer);
