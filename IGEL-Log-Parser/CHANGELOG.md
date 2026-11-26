@@ -1,5 +1,10 @@
 # IGEL Log Parser changelog
 
+## [1.0.2](https://github.com/rasmusoli/IGEL-Fun-Stuff/releases/tag/igel-log-parser-v1.0.2) (2026-11-26)
+
+- **Compare devices now groups settings in UMS, too.** Select two devices from one combined support ZIP and expand setting paths such as **CWA → Module → VirtualDriver** or **Devices → Hotplug**. Search covers all retained observations, and large groups page independently.
+- Device-specific values and evidence stay side by side. Empty captured strings remain distinct from settings that were not observed.
+
 ## [1.0.1](https://github.com/rasmusoli/IGEL-Fun-Stuff/releases/tag/igel-log-parser-v1.0.1) (2026-11-26)
 
 - **Compare two devices from one support ZIP.** Open **Compare devices** after loading a combined UMS support bundle with two devices. There’s no need to split the ZIP. **Compare captures** still compares logs from the same device over time.
